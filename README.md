@@ -24,16 +24,20 @@ Este proyecto utiliza los conceptos vistos durante la cursada de la materia:
 - **Complejidad:** Cada operación fue hecha para cumplir con la complejidad especificada en el enunciado (justificada en los comentarios de código).
 
 
-## Funcionalidades 
-El sistema EdR implementa las siguientes operaciones: 
-1. nuevoEdr(...): Inicializa el sistema. Crea una estructura de estudiantes y los ubica en aula con un espacio de por medio.
-2. copiarse(estudiante): Un estudiante se copia de su mejor vecino. El "mejor vecino" es aquel que tiene la mayor cantidad de respuestas que el estudiante no tiene. Solo se copia la primera respuesta faltante. Desempata por ID mayor.
-3. resolver(estudiante, nroEjercicio, respuesta): El estudiante resuelva un ejercicio. Su nota se actualiza en O(1) gracias a que mantenemos un contador de respuestas correctas, y si posición en el heap se ordena en O(log E).
-4. consultarDarkWeb(k, examenDW): Los k estudientes con peor punatje reemplazan completamente su examen por el examenDW. Desempata por menor ID.
-5. notas(): Devuelve una secuencia de notas de todos los estudiantes, ordenada por ID.
-6. entregar(estudiante): Marca el examen del estudiante como entregado. Esto afecto su priotidad en el heap (los que entregaron tienen prioridad más baja para ser los "peores").
-7. chequearCopias(): Detecta qué estudiantes con sospechosos de haberse copiado según el criterio "Un/a estudiante sospechoso de haberse copiado es alguien que tiene cada respuesta de su examen igual a al menos el 25 % de todos los estudiantes". Devuelve una lista ordenada de IDs.
-8. corregir(): Devuelve las notas de los exámenes de los estudiantes que no se copiaron, ordenadas de mayor a menor nota. Desempata por mayor ID.
+## Funcionalidades
+
+El sistema EdR implementa las siguientes operaciones:
+
+| Operación | Descripción |
+|-----------|-------------|
+| `nuevoEdr(...)` | Inicializa el sistema. Crea una estructura de estudiantes y los ubica en aula con un espacio de por medio. |
+| `copiarse(estudiante)` | Un estudiante se copia de su mejor vecino. El "mejor vecino" es aquel que tiene la mayor cantidad de respuestas que el estudiante no tiene. Solo se copia la primera respuesta faltante. *Desempata por ID mayor.* |
+| `resolver(estudiante, nroEjercicio, respuesta)` | El estudiante resuelve un ejercicio. Su nota se actualiza en `O(1)` gracias a que mantenemos un contador de respuestas correctas, y su posición en el heap se ordena en `O(log E)`. |
+| `consultarDarkWeb(k, examenDW)` | Los k estudiantes con peor puntaje reemplazan completamente su examen por el `examenDW`. *Desempata por menor ID.* |
+| `notas()` | Devuelve una secuencia de notas de todos los estudiantes, ordenada por ID. |
+| `entregar(estudiante)` | Marca el examen del estudiante como entregado. Esto afecta su prioridad en el heap (los que entregaron tienen prioridad más baja para ser los "peores"). |
+| `chequearCopias()` | Detecta qué estudiantes son sospechosos de haberse copiado según el criterio *"Un/a estudiante sospechoso de haberse copiado es alguien que tiene cada respuesta de su examen igual a al menos el 25 % de todos los estudiantes"*. Devuelve una lista ordenada de IDs. |
+| `corregir()` | Devuelve las notas de los exámenes de los estudiantes que **no** se copiaron, ordenadas de mayor a menor nota. *Desempata por mayor ID.* |
 
 ## Estructura del proyecto 
 ```text
