@@ -36,13 +36,13 @@ El sistema EdR implementa las siguientes operaciones:
 8. corregir(): Devuelve las notas de los exámenes de los estudiantes que no se copiaron, ordenadas de mayor a menor nota. Desempata por mayor ID.
 
 ## Estructura del proyecto 
-src/
-├── aed/
-│   ├── EdR.java               # Clase principal que implementa el TAD. Contiene el flujo de trabajo.
-│   ├── Estudiante.java        # Modela a un estudiante (ID, posición, nota, respuestas, estado).
-│   ├── Examen.java            # Modela el examen de un estudiante (arreglo de respuestas).
-│   ├── HeapMin.java           # Implementación de una cola de prioridad (heap mínimo) sobre un arreglo.
-│   │   └── Handle             # Clase interna que encapsula una referencia a un nodo del heap.
-│   └── NotaFinal.java         # Clase auxiliar para el resultado de la corrección (nota, ID).
-
-
+```text
+src
+└── aed
+    ├── EdR.java              # Clase principal que implementa el TAD. Aquí están implementadas las operación del enunciado. 
+    ├── Estudiante.java       # Clase Estudiante
+    ├── Examen.java           # Clase Examen
+    ├── HeapMin.java          # Clase HeapMin
+    │   └── Handle            # Clase interna que encapsula una referencia a un nodo del heap
+    └── NotaFinal.java        # Clase para el resultado de la corrección (aportada por la cátedra)
+```
