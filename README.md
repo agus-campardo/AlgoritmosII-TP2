@@ -7,7 +7,7 @@ El sistema modela un aula con una distribución específica de asientos, donde l
 
 El objetivo principal fue implementar un **Tipo Abstracto de Datos (TAD) EdR**, esperando que se cumpla la complejidad temporal en cada caso, usando abstracción, encapsulamiento y modularidad.
 
-## Integrantes del Equipo
+## Integrantes del grupo 
 
 - Lucas Akerman
 - Agustina Campardo
