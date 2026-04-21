@@ -56,7 +56,7 @@ Complejidad: O(E ∗ log(E)).
 ```text
 src
 └── aed
-    ├── EdR.java              # Clase principal que implementa el TAD. Aquí están implementadas las operación del enunciado. 
+    ├── EdR.java              # Clase principal que implementa el TAD. Acá están implementadas las operación del enunciado. 
     ├── Estudiante.java       # Clase Estudiante
     ├── Examen.java           # Clase Examen
     ├── HeapMin.java          # Clase HeapMin
